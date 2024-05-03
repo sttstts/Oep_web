@@ -1,0 +1,53 @@
+/* feedback_styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333; /* Цвет текста */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.contact-info, .social-links, .faq, .thank-you {
+    max-width: 600px;
+    margin: 0 auto 30px; /* Центрирование блоков и добавление нижнего отступа */
+    padding: 20px;
+    background-color: #f9f9f9; /* Цвет фона блоков */
+    border-radius: 10px; /* Закругление углов */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень блоков */
+}
+
+.contact-info h2, .social-links h2, .faq h2 {
+    color: #555; /* Цвет заголовков */
+}
+
+.social-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links ul li {
+    margin-bottom: 10px;
+}
+
+.social-links ul li a {
+    color: #007bff; /* Цвет ссылок */
+    text-decoration: none;
+}
+
+.social-links ul li a:hover {
+    text-decoration: underline;
+}
+
+.faq strong {
+    color: #555; /* Цвет выделенного текста */
+}
+
+.thank-you {
+    text-align: center;
+    font-style: italic;
+}

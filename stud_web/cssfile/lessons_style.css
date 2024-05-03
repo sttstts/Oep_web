@@ -1,0 +1,44 @@
+/* lessons_styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333; /* Цвет текста */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.lesson-list {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0;
+}
+
+.lesson-list li {
+    background-color: #f9f9f9; /* Цвет фона карточки урока */
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 5px; /* Закругляем углы карточки */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Добавляем тень */
+}
+
+.lesson-list li h2 {
+    margin-bottom: 5px;
+}
+
+.lesson-list li a {
+    display: inline-block;
+    background-color: #007bff; /* Цвет фона кнопки */
+    color: #fff; /* Цвет текста кнопки */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px; /* Закругляем углы кнопки */
+    transition: background-color 0.3s; /* Плавное изменение цвета фона при наведении */
+}
+
+.lesson-list li a:hover {
+    background-color: #0056b3; /* Цвет фона кнопки при наведении */
+}

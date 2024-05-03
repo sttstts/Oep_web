@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест по географии</title>
+    <link rel="stylesheet" href="cssfile/geography_test.css"> <!-- Подключаем файл стилей CSS -->
+</head>
+<body>
+    <h1>Тест по географии</h1>
+
+    <form id="geographyTestForm"> <!-- Добавляем идентификатор форме -->
+        <ol>
+            <!-- Первый вопрос -->
+            <li>
+                <h3>Какая самая большая страна в мире по территории?</h3>
+                <input type="radio" name="question1" value="correct"> Россия<br>
+                <input type="radio" name="question1" value="incorrect"> Китай<br>
+                <input type="radio" name="question1" value="incorrect"> США<br>
+            </li>
+
+            <!-- Второй вопрос -->
+            <li>
+                <h3>Как называется столица Франции?</h3>
+                <input type="radio" name="question2" value="incorrect"> Берлин<br>
+                <input type="radio" name="question2" value="incorrect"> Лондон<br>
+                <input type="radio" name="question2" value="correct"> Париж<br>
+            </li>
+
+            <!-- Третий вопрос -->
+            <li>
+                <h3>Какой океан находится между Америкой и Европой?</h3>
+                <input type="radio" name="question3" value="incorrect"> Индийский<br>
+                <input type="radio" name="question3" value="correct"> Атлантический<br>
+                <input type="radio" name="question3" value="incorrect"> Тихий<br>
+            </li>
+        </ol>
+        <input type="button" value="Отправить" onclick="checkAnswers()"> <!-- Изменяем тип кнопки на "button" -->
+    </form>
+
+    <div id="result" style="text-align: center; font-size: 24px;"></div> <!-- Блок для вывода результатов -->
+
+    <!-- JavaScript код -->
+    <script>
+        function checkAnswers() {
+            var inputs = document.querySelectorAll("input[type='radio']:checked"); // Получаем выбранные ответы
+            var correctAnswers = 0;
+
+            // Перебираем выбранные ответы и проверяем их на правильность
+            inputs.forEach(function(input) {
+                if (input.value === "correct") {
+                    correctAnswers++;
+                }
+            });
+
+            // Выводим результат на страницу
+            var resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = "Правильных ответов: " + correctAnswers + " из " + inputs.length;
+        }
+    </script>
+</body>
+</html>

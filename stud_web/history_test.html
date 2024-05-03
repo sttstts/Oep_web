@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест по истории</title>
+    <link rel="stylesheet" href="cssfile/history_test.css"> <!-- Подключаем файл стилей CSS -->
+</head>
+<body>
+    <h1>Тест по истории</h1>
+
+    <form id="historyTestForm"> <!-- Добавляем идентификатор форме -->
+        <ol>
+            <!-- Первый вопрос -->
+            <li>
+                <h3>Кто был первым президентом США?</h3>
+                <input type="radio" name="question1" value="incorrect"> Джон Адамс<br>
+                <input type="radio" name="question1" value="correct"> Джордж Вашингтон<br>
+                <input type="radio" name="question1" value="incorrect"> Авраам Линкольн<br>
+            </li>
+
+            <!-- Второй вопрос -->
+            <li>
+                <h3>Когда началась Первая мировая война?</h3>
+                <input type="radio" name="question2" value="incorrect"> 1914 год<br>
+                <input type="radio" name="question2" value="correct"> 1914 год<br>
+                <input type="radio" name="question2" value="incorrect"> 1918 год<br>
+            </li>
+
+            <!-- Третий вопрос -->
+            <li>
+                <h3>Какая страна начала космическую эру, запустив первый искусственный спутник Земли?</h3>
+                <input type="radio" name="question3" value="correct"> СССР<br>
+                <input type="radio" name="question3" value="incorrect"> США<br>
+                <input type="radio" name="question3" value="incorrect"> Китай<br>
+            </li>
+
+            <!-- Четвертый вопрос -->
+            <li>
+                <h3>Какая страна объявила независимость от СССР в 1991 году?</h3>
+                <input type="radio" name="question4" value="incorrect"> Россия<br>
+                <input type="radio" name="question4" value="correct"> Украина<br>
+                <input type="radio" name="question4" value="incorrect"> Беларусь<br>
+            </li>
+
+            <!-- Пятый вопрос -->
+            <li>
+                <h3>Какое событие привело к началу Первой мировой войны?</h3>
+                <input type="radio" name="question5" value="correct"> Убийство архидукa Франца Фердинанда<br>
+                <input type="radio" name="question5" value="incorrect"> Взрыв Луситании<br>
+                <input type="radio" name="question5" value="incorrect"> Битва при Сомме<br>
+            </li>
+        </ol>
+        <input type="button" value="Отправить" onclick="checkAnswers()"> <!-- Изменяем тип кнопки на "button" -->
+    </form>
+
+    <div id="result" style="text-align: center; font-size: 24px;"></div> <!-- Блок для вывода результатов -->
+
+    <!-- JavaScript код -->
+    <script>
+        function checkAnswers() {
+            var inputs = document.querySelectorAll("input[type='radio']:checked"); // Получаем выбранные ответы
+            var correctAnswers = 0;
+
+            // Перебираем выбранные ответы и проверяем их на правильность
+            inputs.forEach(function(input) {
+                if (input.value === "correct") {
+                    correctAnswers++;
+                }
+            });
+
+            // Выводим результат на страницу
+            var resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = "Правильных ответов: " + correctAnswers + " из " + inputs.length;
+        }
+    </script>
+</body>
+</html>
