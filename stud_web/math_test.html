@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Тест по математике</title>
-    <link rel="stylesheet" href="cssfile/math_test_styles.css"> <!-- Подключаем файл стилей CSS -->
+    <link rel="stylesheet" href="cssfile/math_test_styles.css"> 
 </head>
 <body>
     <h1>Тест по математике</h1>
 
-    <form id="mathTestForm"> <!-- Добавляем идентификатор форме -->
+    <form id="mathTestForm"> 
         <ol>
-            <!-- Первый вопрос -->
             <li>
                 <h3>Сколько будет 2 + 2?</h3>
                 <input type="radio" name="question1" value="incorrect"> 3<br>
@@ -19,7 +18,7 @@
                 <input type="radio" name="question1" value="incorrect"> 5<br>
             </li>
 
-            <!-- Второй вопрос -->
+
             <li>
                 <h3>Чему равно значение числа 𝜋 (пи)?</h3>
                 <input type="radio" name="question2" value="incorrect"> 3.14<br>
@@ -27,7 +26,7 @@
                 <input type="radio" name="question2" value="incorrect"> 3.14159<br>
             </li>
 
-            <!-- Третий вопрос -->
+
             <li>
                 <h3>Сколько секунд в одном часе?</h3>
                 <input type="radio" name="question3" value="incorrect"> 60<br>
@@ -35,7 +34,7 @@
                 <input type="radio" name="question3" value="incorrect"> 86400<br>
             </li>
 
-            <!-- Четвертый вопрос -->
+
             <li>
                 <h3>Как называется число, которое делится на себя и на 1?</h3>
                 <input type="radio" name="question4" value="incorrect"> Простое число<br>
@@ -43,7 +42,7 @@
                 <input type="radio" name="question4" value="incorrect"> Сложное число<br>
             </li>
 
-            <!-- Пятый вопрос -->
+
             <li>
                 <h3>Чему равно произведение 3 × 5?</h3>
                 <input type="radio" name="question5" value="incorrect"> 8<br>
@@ -51,7 +50,7 @@
                 <input type="radio" name="question5" value="incorrect"> 35<br>
             </li>
 
-            <!-- Шестой вопрос -->
+
             <li>
                 <h3>Сколько десятков в числе 73?</h3>
                 <input type="radio" name="question6" value="incorrect"> 7<br>
@@ -59,7 +58,7 @@
                 <input type="radio" name="question6" value="incorrect"> 73<br>
             </li>
 
-            <!-- Седьмой вопрос -->
+
             <li>
                 <h3>Как называется число, которое меньше 0?</h3>
                 <input type="radio" name="question7" value="incorrect"> Положительное<br>
@@ -67,7 +66,7 @@
                 <input type="radio" name="question7" value="incorrect"> Нулевое<br>
             </li>
 
-            <!-- Восьмой вопрос -->
+
             <li>
                 <h3>Чему равно значение 10 в степени 2?</h3>
                 <input type="radio" name="question8" value="incorrect"> 20<br>
@@ -75,7 +74,7 @@
                 <input type="radio" name="question8" value="incorrect"> 102<br>
             </li>
 
-            <!-- Девятый вопрос -->
+
             <li>
                 <h3>Сколько градусов в прямом угле?</h3>
                 <input type="radio" name="question9" value="incorrect"> 45<br>
@@ -83,7 +82,7 @@
                 <input type="radio" name="question9" value="incorrect"> 180<br>
             </li>
 
-            <!-- Десятый вопрос -->
+
             <li>
                 <h3>Как называется число, которое делится на 2 без остатка?</h3>
                 <input type="radio" name="question10" value="incorrect"> Простое<br>
@@ -91,25 +90,25 @@
                 <input type="radio" name="question10" value="incorrect"> Нечётное<br>
             </li>
         </ol>
-        <input type="button" value="Отправить" onclick="checkAnswers()"> <!-- Изменяем тип кнопки на "button" -->
+        <input type="button" value="Отправить" onclick="checkAnswers()"> 
     </form>
 
-    <div id="result" style="text-align: center; font-size: 24px;"></div> <!-- Блок для вывода результатов -->
+    <div id="result" style="text-align: center; font-size: 24px;"></div> 
 
-    <!-- JavaScript код -->
+
     <script>
         function checkAnswers() {
-            var inputs = document.querySelectorAll("input[type='radio']:checked"); // Получаем выбранные ответы
+            var inputs = document.querySelectorAll("input[type='radio']:checked"); 
             var correctAnswers = 0;
 
-            // Перебираем выбранные ответы и проверяем их на правильность
+
             inputs.forEach(function(input) {
                 if (input.value === "correct") {
                     correctAnswers++;
                 }
             });
 
-            // Выводим результат на страницу
+
             var resultDiv = document.getElementById("result");
             resultDiv.innerHTML = "Правильных ответов: " + correctAnswers + " из " + inputs.length;
         }

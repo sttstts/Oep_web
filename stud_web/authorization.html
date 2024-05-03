@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Авторизация</title>
-    <link rel="stylesheet" href="cssfile/styles.css"> <!-- Подключаем файл стилей CSS -->
+    <link rel="stylesheet" href="cssfile/styles.css"> 
 </head>
 <body>
     <form id="loginForm">
@@ -18,18 +18,18 @@
 
     <script>
         document.getElementById('loginForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Предотвращаем стандартное поведение формы
+            event.preventDefault(); 
 
-            // Получаем данные формы
+
             const username = document.getElementById('username').value;
             const password = document.getElementById('password').value;
 
-            // Проверяем логин и пароль
+
             if (username === '1' && password === '1') {
-                // Если логин и пароль верны, перенаправляем на следующую страницу
+
                 window.location.href = 'main.html';
             } else {
-                // Если логин и пароль неверны, показываем уведомление
+
                 alert('Неправильный логин или пароль');
             }
         });

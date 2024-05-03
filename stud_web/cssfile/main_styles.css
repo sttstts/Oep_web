@@ -1,7 +1,6 @@
-/* main_styles.css */
 html {
     height: 100%;
-    background-image: url('../image/bg.jpg'); /* Изменил путь к изображению */
+    background-image: url('../image/bg.jpg'); 
     background-size: cover;
     background-position: center;
     overflow: hidden;

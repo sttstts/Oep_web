@@ -1,8 +1,6 @@
-/* feedback_styles.css */
-
 body {
     font-family: Arial, sans-serif;
-    color: #333; /* Цвет текста */
+    color: #333; 
     margin: 0;
     padding: 0;
 }
@@ -14,15 +12,15 @@ h1 {
 
 .contact-info, .social-links, .faq, .thank-you {
     max-width: 600px;
-    margin: 0 auto 30px; /* Центрирование блоков и добавление нижнего отступа */
+    margin: 0 auto 30px; 
     padding: 20px;
-    background-color: #f9f9f9; /* Цвет фона блоков */
-    border-radius: 10px; /* Закругление углов */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Тень блоков */
+    background-color: #f9f9f9; 
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .contact-info h2, .social-links h2, .faq h2 {
-    color: #555; /* Цвет заголовков */
+    color: #555;
 }
 
 .social-links ul {
@@ -35,7 +33,7 @@ h1 {
 }
 
 .social-links ul li a {
-    color: #007bff; /* Цвет ссылок */
+    color: #007bff; 
     text-decoration: none;
 }
 
@@ -44,7 +42,7 @@ h1 {
 }
 
 .faq strong {
-    color: #555; /* Цвет выделенного текста */
+    color: #555; 
 }
 
 .thank-you {

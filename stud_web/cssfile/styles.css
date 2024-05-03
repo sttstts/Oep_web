@@ -1,11 +1,10 @@
-/* styles.css */
 body {
     font-family: Arial, sans-serif;
 }
 
 form {
     max-width: 300px;
-    margin: 200px auto 0; /* устанавливаем верхний отступ в 50px */
+    margin: 200px auto 0; 
 }
 
 input[type="text"],
